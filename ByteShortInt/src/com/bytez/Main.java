@@ -27,7 +27,7 @@ public class Main {
     }
 
     public static double area(double radius) {
-        if(radius < 0) {
+        if (radius < 0) {
             return -1.0;
         }
 
@@ -35,7 +35,7 @@ public class Main {
     }
 
     public static double area(double x, double y) {
-        if(x < 0 || y < 0) {
+        if (x < 0 || y < 0) {
             return -1.0;
         }
 
@@ -43,7 +43,7 @@ public class Main {
     }
 
     public static void printYearsAndDays(long minutes) {
-        if(minutes < 0) {
+        if (minutes < 0) {
             System.out.println("Invalid Value");
             return;
         }
@@ -56,7 +56,7 @@ public class Main {
     }
 
     public static void printEqual(int one, int two, int three) {
-        if(one < 0 || two < 0 || three < 0) {
+        if (one < 0 || two < 0 || three < 0) {
             System.out.println("Invalid Value");
         } else if (one == two && one == three && two == three) {
             System.out.println("All numbers are equal");
@@ -69,7 +69,7 @@ public class Main {
     }
 
     public static boolean isCatPlaying(boolean summer, int temperature) {
-        if(temperature < 25) {
+        if (temperature < 25) {
             return false;
         } else if (!summer && temperature < 36) {
             return true;
@@ -79,4 +79,43 @@ public class Main {
             return false;
         }
     }
+
+    public static void printNumberInWord(int number) {
+        switch (number) {
+            case 0:
+                System.out.println("ZERO");
+                break;
+            case 1:
+                System.out.println("ONE");
+                break;
+            case 2:
+                System.out.println("TWO");
+                break;
+            case 3:
+                System.out.println("THREE");
+                break;
+            case 4:
+                System.out.println("FOUR");
+                break;
+            case 5:
+                System.out.println("FIVE");
+                break;
+            case 6:
+                System.out.println("SIX");
+                break;
+            case 7:
+                System.out.println("SEVEN");
+                break;
+            case 8:
+                System.out.println("EIGHT");
+                break;
+            case 9:
+                System.out.println("NINE");
+                break;
+            default:
+                System.out.println("OTHER");
+                break;
+        }
+    }
 }
+
