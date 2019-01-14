@@ -117,5 +117,37 @@ public class Main {
                 break;
         }
     }
+
+    public static boolean isLeapYear(int year) {
+        if (year < 1 || year > 9999) {
+            return false;
+        } else if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    public static int getDaysInMonth(int month, int year) {
+        if(year < 1 || year > 9999 || month < 1 || month > 12) {
+            return -1;
+        }
+
+        boolean leapYear = isLeapYear(year);
+
+        if(month == 2 && leapYear) {
+            return 29;
+        } else if (month == 2) {
+            return 28;
+        }
+
+        switch(month) {
+            case 4: case 6: case 9: case 11:
+                return 30;
+            default:
+                return 31;
+        }
+    }
 }
 
