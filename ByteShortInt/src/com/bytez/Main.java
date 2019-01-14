@@ -67,4 +67,16 @@ public class Main {
         }
 
     }
+
+    public static boolean isCatPlaying(boolean summer, int temperature) {
+        if(temperature < 25) {
+            return false;
+        } else if (!summer && temperature < 36) {
+            return true;
+        } else if (summer && temperature < 46) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
