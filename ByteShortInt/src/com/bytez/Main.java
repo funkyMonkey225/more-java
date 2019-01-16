@@ -22,6 +22,30 @@ public class Main {
         return trimmedDoubleOne == trimmedDoubleTwo;
     }
 
+    public static int sumOdd(int start, int end) {
+        if(start < 1 || end < 1 || start > end) {
+            return -1;
+        }
+        int sum = 0;
+        for(int i=start; i <= end; i++) {
+            if(isOdd(i)) {
+                sum += i;
+            }
+        }
+        return sum;
+    }
+
+    public static boolean isOdd(int number) {
+        if(number < 1) {
+            return false;
+        } else if (number % 2 != 0) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
     public static boolean hasTeen(int one, int two, int three) {
         return ((one > 12 && one < 20) || (two > 12 && two < 20) || (three > 12 && three < 20));
     }
