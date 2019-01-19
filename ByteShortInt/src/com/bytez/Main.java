@@ -7,9 +7,24 @@ public class Main {
 
     public static void main(String[] args) {
         int zero = 0 / 1024;
-        printYearsAndDays(525600);
-        printYearsAndDays(1051200);
-        printYearsAndDays(561600);
+        System.out.println(isPalindrome(-222));
+    }
+
+    public static boolean isPalindrome(int number) {
+        boolean palindrome = true;
+        String numberAsString = String.valueOf(Math.abs(number));
+        int reverseCounter = numberAsString.length() - 1;
+        int counter = 0;
+
+        while(counter < (numberAsString.length())/2) {
+            if(numberAsString.charAt(counter) != numberAsString.charAt(reverseCounter)) {
+                palindrome = false;
+                break;
+            }
+            counter++;
+            reverseCounter--;
+        }
+        return palindrome;
     }
 
 
