@@ -10,6 +10,19 @@ public class Main {
         System.out.println(isPalindrome(-222));
     }
 
+    public static int sumFirstAndLastDigit(int number) {
+        if(number < 0) {
+            return -1;
+        }
+
+        String numberAsString = String.valueOf(number);
+        String firstDigit = String.valueOf(numberAsString.charAt(0));
+        String lastDigit = String.valueOf(numberAsString.charAt(numberAsString.length() - 1));
+        int sum = Integer.parseInt(firstDigit) + Integer.parseInt(lastDigit);
+
+        return sum;
+    }
+
     public static boolean isPalindrome(int number) {
         boolean palindrome = true;
         String numberAsString = String.valueOf(Math.abs(number));
