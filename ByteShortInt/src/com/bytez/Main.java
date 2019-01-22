@@ -10,6 +10,22 @@ public class Main {
         System.out.println(isPalindrome(-222));
     }
 
+    public static boolean hasSharedDigit(int num1, int num2) {
+        if(num1 < 10 || num1 > 99 || num2 < 10 || num2 > 99) {
+            return false;
+        }
+
+        String num1AsString = String.valueOf(num1);
+        String num2AsString = String.valueOf(num2);
+
+        if(num2AsString.contains(num1AsString.substring(0,1)) ||
+                num2AsString.contains(num1AsString.substring(1))) {
+            return true;
+        }
+
+        return false;
+    }
+
     public static int getEvenDigitSum(int number) {
         if(number < 0) {
             return -1;
