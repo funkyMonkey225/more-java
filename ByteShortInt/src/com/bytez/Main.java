@@ -10,6 +10,23 @@ public class Main {
         System.out.println(isPalindrome(-222));
     }
 
+    public static int getEvenDigitSum(int number) {
+        if(number < 0) {
+            return -1;
+        }
+
+        String numberAsString = String.valueOf(number);
+        int sum = 0;
+
+        for(int i=0; i < numberAsString.length(); i++) {
+            if(numberAsString.charAt(i) % 2 == 0) {
+                sum += Integer.parseInt(String.valueOf(numberAsString.charAt(i)));
+            }
+        }
+
+        return sum;
+    }
+
     public static int sumFirstAndLastDigit(int number) {
         if(number < 0) {
             return -1;
