@@ -26,6 +26,24 @@ public class Main {
         return false;
     }
 
+    public static int getGreatestCommonDivisor(int first, int second) {
+        if(first < 10 || second < 10) {
+            return -1;
+        }
+
+        int minimum = second;
+        if(first < second) {
+            minimum = first;
+        }
+
+        for(int i=minimum; i > 0; i--) {
+            if(second % i == 0 && first % i == 0) {
+                return i;
+            }
+        }
+        return 1;
+    }
+
     public static boolean hasSharedDigit(int num1, int num2) {
         if(num1 < 10 || num1 > 99 || num2 < 10 || num2 > 99) {
             return false;
