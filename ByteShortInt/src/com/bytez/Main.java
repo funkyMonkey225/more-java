@@ -10,6 +10,22 @@ public class Main {
         System.out.println(isPalindrome(-222));
     }
 
+    public static boolean hasSameLastDigit(int num1, int num2, int num3) {
+        if(num1 < 10 || num1 > 1000 || num2 < 10 || num2 > 1000 || num3 < 10 || num3 > 1000) {
+            return false;
+        }
+
+        char num1LastDigit = String.valueOf(num1).charAt(String.valueOf(num1).length() - 1);
+        char num2LastDigit = String.valueOf(num2).charAt(String.valueOf(num2).length() - 1);
+        char num3LastDigit = String.valueOf(num3).charAt(String.valueOf(num3).length() - 1);
+
+        if(num1LastDigit == num2LastDigit || num1LastDigit == num3LastDigit || num3LastDigit == num2LastDigit) {
+            return true;
+        }
+
+        return false;
+    }
+
     public static boolean hasSharedDigit(int num1, int num2) {
         if(num1 < 10 || num1 > 99 || num2 < 10 || num2 > 99) {
             return false;
