@@ -1,13 +1,90 @@
 package com.bytez;
 
 import java.math.RoundingMode;
+import java.sql.SQLOutput;
 import java.text.DecimalFormat;
 
 public class Main {
 
     public static void main(String[] args) {
         int zero = 0 / 1024;
-        System.out.println(isPalindrome(-222));
+        numberToWords(-222);
+        System.out.println(getDigitCount(0));
+        System.out.println(reverse(-121));
+        System.out.println(reverse(701));
+        System.out.println(getDigitCount(-1));
+    }
+
+    public static int getDigitCount(int number) {
+        if(number < 0) {
+            return -1;
+        }
+
+        return String.valueOf(number).length();
+    }
+
+    public static void numberToWords(int number) {
+        if(number < 0) {
+            System.out.println("Invalid Value");
+            return;
+        }
+
+        String numberAsString = String.valueOf(number);
+
+        for(int i=0; i < numberAsString.length(); i++) {
+            switch (String.valueOf(numberAsString.charAt(i))) {
+                case "0":
+                    System.out.println("Zero");
+                    break;
+                case "1":
+                    System.out.println("One");
+                    break;
+                case "2":
+                    System.out.println("Two");
+                    break;
+                case "3":
+                    System.out.println("Three");
+                    break;
+                case "4":
+                    System.out.println("Four");
+                    break;
+                case "5":
+                    System.out.println("Five");
+                    break;
+                case "6":
+                    System.out.println("Six");
+                    break;
+                case "7":
+                    System.out.println("Seven");
+                    break;
+                case "8":
+                    System.out.println("Eight");
+                    break;
+                case "9":
+                    System.out.println("Nine");
+                    break;
+            }
+        }
+    }
+
+    public static int reverse(int number) {
+        String numberAsString = String.valueOf(Math.abs(number));
+
+        String reverseNumber = "";
+        if(number < 0) {
+            reverseNumber += "-";
+        }
+        boolean leading = true;
+        for(int i=numberAsString.length() - 1; i >= 0; i--) {
+            String charSubstring = String.valueOf(numberAsString.charAt(i));
+            if(!charSubstring.equals("0")) {
+                reverseNumber += charSubstring;
+                leading = false;
+            } else if (!leading) {
+                reverseNumber += charSubstring;
+            }
+        }
+        return Integer.parseInt(reverseNumber);
     }
 
     public static boolean hasSameLastDigit(int num1, int num2, int num3) {
