@@ -7,7 +7,30 @@ import java.text.DecimalFormat;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(getLargestPrime(15));
+        printSquareStar(2);
+    }
+
+    // first or last row or column
+    //  row # = col #
+    // col # = rowCount - currRow + 1
+
+    public static void printSquareStar(int number) {
+        if(number < 5) {
+            System.out.println("Invalid Value");
+            return;
+        }
+
+        for(int row=number; row>0; row--) {
+            for(int col=number; col>0; col--) {
+                if(row == 1 || row == number || col == 1 || col == number ||
+                        col == (number - row + 1) || col == row) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
     }
 
     public static int getLargestPrime(int number) {
