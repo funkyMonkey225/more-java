@@ -7,12 +7,33 @@ import java.text.DecimalFormat;
 public class Main {
 
     public static void main(String[] args) {
-        int zero = 0 / 1024;
-        numberToWords(-222);
-        System.out.println(getDigitCount(0));
-        System.out.println(reverse(-121));
-        System.out.println(reverse(701));
-        System.out.println(getDigitCount(-1));
+        System.out.println(canPack(2, 2, 12));
+    }
+        // 5k //1k
+    public static boolean canPack(int bigCount, int smallCount, int goal) {
+        if(bigCount < 0 || smallCount < 0 || goal < 0) {
+            return false;
+        }
+
+        for(int i = bigCount; i > 0; i--) {
+            if(goal > 4) {
+                goal -= 5;
+                bigCount -= 1;
+            } else {
+                i = 0;
+            }
+        }
+
+        for(int i = smallCount; i > 0; i--) {
+            if(goal > 0) {
+                goal -= 1;
+                smallCount -= 1;
+            } else {
+                i = 0;
+            }
+        }
+
+        return goal == 0;
     }
 
     public static int getDigitCount(int number) {
