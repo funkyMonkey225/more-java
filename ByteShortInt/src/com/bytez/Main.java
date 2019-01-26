@@ -7,9 +7,25 @@ import java.text.DecimalFormat;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(canPack(2, 2, 12));
+        System.out.println(getLargestPrime(15));
     }
-        // 5k //1k
+
+    public static int getLargestPrime(int number) {
+        if(number < 2) {
+            return -1;
+        }
+        int i;
+
+        for (i = 2; i <= number; i++) {
+            if (number % i == 0) {
+                number /= i;
+                i--;
+            }
+        }
+
+        return i;
+    }
+
     public static boolean canPack(int bigCount, int smallCount, int goal) {
         if(bigCount < 0 || smallCount < 0 || goal < 0) {
             return false;
