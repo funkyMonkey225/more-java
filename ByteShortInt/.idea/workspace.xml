@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2028e4de-61dd-4692-8418-d77006b353e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Scanner/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Scanner/src/scanz/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Scanner/src/scanz/Outlander.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Scanner/src/scanz/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Scanner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Scanner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scanner/src/scanz/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Scanner/src/scanz/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
