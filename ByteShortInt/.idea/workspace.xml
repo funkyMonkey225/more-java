@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2028e4de-61dd-4692-8418-d77006b353e0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Scanner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Scanner/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Scanner/src/scanz/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Scanner/src/scanz/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -149,7 +150,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="817" y="104" width="841" height="796" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49788135" visible="true" weight="0.16645807" />
       <window_info id="Structure" order="1" sideWeight="0.50211865" side_tool="true" weight="0.11721992" />
